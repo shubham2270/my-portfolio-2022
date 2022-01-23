@@ -1,0 +1,13 @@
+@import "/src/constants/scss/__base.scss";
+
+.main {
+  display: flex;
+  align-items: center;
+  color: $light;
+  .navItem {
+    padding-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
