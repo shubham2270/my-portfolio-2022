@@ -11,6 +11,10 @@
     min-width: 100%;
     min-height: 100%;
     filter: blur(10px) brightness(0.6);
+
+    @include media-query("small") {
+      filter: blur(5px) brightness(0.6);
+    }
   }
 
   .container {
@@ -24,6 +28,11 @@
     transform: translate(-50%, -50%);
     border-radius: $radius;
     opacity: 0.9;
+
+    @include media-query("small") {
+      width: 90%;
+      height: 90%;
+    }
 
     .pathContainer {
       padding: 14px;

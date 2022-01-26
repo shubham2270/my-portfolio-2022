@@ -3,11 +3,28 @@
 .main {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: $light;
+  width: 100%;
   .navItem {
     padding-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
+
+    @include media-query("medium") {
+      justify-self: center;
+      padding-right: 30px;
+      font-size: 16px;
+    }
+
+    @include media-query("small") {
+      display: flex;
+      justify-content: space-around;
+      padding-right: 10px;
+      font-size: 12px;
+      width: 100%;
+      justify-self: center;
+    }
   }
 }
