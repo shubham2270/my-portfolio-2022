@@ -1,10 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Navbar from '../Navbar';
+import dynamic from 'next/dynamic';
+// import Navbar from '../Navbar';
+
+const Navbar = dynamic(() => import('../Navbar'));
 
 import styles from './layout.module.scss';
 const { container, main, background, pathContainer, pathText, timeText, navContainer } = styles;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, currentPath }) => {
   const videoRef = useRef(null);
   const [time, setTime] = useState('');
 
