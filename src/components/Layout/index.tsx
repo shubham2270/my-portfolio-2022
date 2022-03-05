@@ -1,13 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
-// import Navbar from '../Navbar';
+import { useRouter } from 'next/router';
+import Navbar from '../Navbar';
 
-const Navbar = dynamic(() => import('../Navbar'));
+// const Navbar = dynamic(() => import('../Navbar'));
 
 import styles from './layout.module.scss';
 const { container, main, background, pathContainer, pathText, timeText, navContainer } = styles;
 
 const Layout = ({ children, currentPath }) => {
+  const router = useRouter();
   const videoRef = useRef(null);
   const [time, setTime] = useState('');
 
@@ -45,7 +46,7 @@ const Layout = ({ children, currentPath }) => {
       </video>
       <div className={container}>
         <div className={pathContainer}>
-          <span className={pathText}>~/Home</span>
+          <span className={pathText}>~{router.asPath === '/' ? '/home' : router.asPath}</span>
           <span className={timeText}>{time}</span>
         </div>
         <div className={navContainer}>

@@ -1,0 +1,25 @@
+@import "/src/constants/scss/__base.scss";
+
+.main {
+  //   width: 50%;
+}
+
+.helloStyle {
+  font-size: 124px;
+  color: $light;
+  font-weight: bold;
+  line-height: 80px;
+}
+
+.nameStyle {
+  font-size: 100px;
+  color: $yellow;
+  font-weight: bold;
+}
+
+.frontEndStyle {
+  font-size: 48px;
+  color: $pink;
+  font-weight: bold;
+  line-height: 20px;
+}
