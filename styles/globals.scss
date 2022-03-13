@@ -1,3 +1,5 @@
+@import "/src/constants/scss/__base.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;600;700&family=Ubuntu+Mono&display=swap");
 
 html,
@@ -15,4 +17,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.heading {
+  font-size: 80px;
+  color: $yellow;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.bodyText {
+  font-size: 24px;
+  color: $light;
+  width: 680px;
 }

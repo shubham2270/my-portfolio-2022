@@ -1,0 +1,14 @@
+@import "/src/constants/scss/__base.scss";
+
+.main {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  .myImage {
+    border-radius: 50%;
+  }
+  .imageContainer {
+    border: $border;
+    border-radius: 50%;
+  }
+}

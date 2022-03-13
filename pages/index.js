@@ -16,16 +16,6 @@ export default function Home() {
       <main className={styles.main}>
         <div style={{ display: 'flex' }}>
           <MyName />
-          <div style={{}}>
-            <Image
-              src="/assets/images/me.jpg"
-              objectFit="cover"
-              alt="me"
-              width={200}
-              height={200}
-              className={styles.myImage}
-            />
-          </div>
         </div>
       </main>
     </>
