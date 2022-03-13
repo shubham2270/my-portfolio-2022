@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.scss';
 
 import Layout from 'src/components/Layout';
 import MyName from 'src/components/MyName';
@@ -14,7 +14,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <MyName />
+        <div style={{ display: 'flex' }}>
+          <MyName />
+          <div style={{}}>
+            <Image
+              src="/assets/images/me.jpg"
+              objectFit="cover"
+              alt="me"
+              width={200}
+              height={200}
+              className={styles.myImage}
+            />
+          </div>
+        </div>
       </main>
     </>
   );
