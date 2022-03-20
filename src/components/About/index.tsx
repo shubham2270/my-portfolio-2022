@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import classNames from 'classnames';
 
 import styles from './about.module.scss';
 
-const { heading, main, description, imageContainer, socialIconContainer } = styles;
+const { heading, main, description, imageContainer, socialIconContainer, icon, buttonContainer, button } = styles;
 
 const About = () => {
   return (
@@ -18,6 +19,26 @@ const About = () => {
             new technologies.
           </p>
         </div>
+        <div className={buttonContainer}>
+          <div className={socialIconContainer}>
+            <a href="https://twitter.com/shubham2272" target="_blank" rel="noopener noreferrer">
+              <i className={classNames('fab', 'fa-twitter', icon)}></i>
+            </a>
+            <a href="https://github.com/shubham2270" target="_blank" rel="noopener noreferrer">
+              <i className={classNames('fab', 'fa-github', icon)}></i>
+            </a>
+            <a href="https://linkedin.com/in/shubham2270" target="_blank" rel="noopener noreferrer">
+              <i className={classNames('fab', 'fa-linkedin-in', icon)}></i>
+            </a>
+          </div>
+          <a
+            className={button}
+            href="https://drive.google.com/file/d/1qjMf_Umeb7Hd7AgYAd5BHP9_-CtyPqwU/view"
+            target="_blank"
+            rel="noopener noreferrer">
+            <i className="fas fa-file" style={{ paddingRight: '8px' }}></i> Resume
+          </a>
+        </div>
       </div>
       <div className={imageContainer}>
         <Image
@@ -26,10 +47,11 @@ const About = () => {
           alt="me"
           width={400}
           height={400}
+          placeholder="blur"
+          blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           className={styles.myImage}
         />
       </div>
-      <div className={socialIconContainer}></div>
     </div>
   );
 };
