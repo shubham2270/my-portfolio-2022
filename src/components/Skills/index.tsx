@@ -12,30 +12,35 @@ const Skills = () => {
   const unifizeUrl = 'https://www.unifize.com/';
   const aicrowdUrl = 'https://www.aicrowd.com';
 
+  //   At the moment, I'm working as a front-end developer at AIcrowd, where I'm utilising NextJS as my primary library. I previously worked as a front-end developer at Unifize for a year, using ReactJS, Redux, styled-components, and other frameworks and tools.
+
+  // Aside from that, I continue to work on some side projects, either to learn new things or just for fun. For further information, see my GitHub and LinkedIn profiles.
+
   return (
     <div className={main}>
       <div>
         <h2 className="heading">Skills & Experience</h2>
         <div className="bodyText">
-          Currently working as Front End Developer in{' '}
+          At the moment, I'm working as a front-end developer at{' '}
           <a href={aicrowdUrl} target="_blank" rel="noopener noreferrer" className={linkStyle}>
             AIcrowd
           </a>{' '}
-          using Next Js as main library. Previously worked in{' '}
+          , where I'm utilizing NextJS as my primary library. I previously worked as a front-end developer at{' '}
           <a href={unifizeUrl} target="_blank" rel="noopener noreferrer" className={linkStyle}>
             Unifize
           </a>{' '}
-          one year as a Front end developer used React Js, Redux, styled components etc , as main library and tools.
+          for a year, using ReactJS, Redux, styled-components, and other frameworks and tools.
           <br /> <br />
-          Beside I keep working on some side projects either for learning new things or just for fun, Checkout my{' '}
+          Aside from that, I continue to work on some side projects, either to learn new things or just for fun. For
+          further information, check out my{' '}
           <a href={githubUrl} target="_blank" rel="noopener noreferrer" className={linkStyle}>
-            github
+            GitHub
           </a>{' '}
-          &{' '}
+          and{' '}
           <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className={linkStyle}>
-            linkedin{' '}
+            LinkedIn{' '}
           </a>{' '}
-          for more info.
+          profiles.
         </div>
       </div>
     </div>
