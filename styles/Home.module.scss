@@ -9,4 +9,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  @include media-query('small') {
+    padding: 2rem;
+  }
 }
