@@ -2,105 +2,17 @@
 
 .main {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   height: 100%;
-  .myImage {
-    border-radius: 50%;
-  }
-  .imageContainer {
-    border: $border;
-    border-radius: 50%;
-  }
-}
-
-.socialIconContainer {
-  display: flex;
-}
-
-.socialIconContainer a {
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  text-decoration: none;
-  color: $light;
-  background-color: $pink;
-  margin: 0 12px;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.5s;
-
-  &:nth-child(1) {
-    margin-left: 0px;
-  }
-}
-
-.socialIconContainer a .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  font-size: 20px;
-  position: relative;
-  z-index: 10;
-  transition: color 0.5s;
-}
-
-.socialIconContainer a::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: -90px;
-  left: 0;
-  background: $yellow;
-  position: absolute;
-  transition: 0.5s;
-}
-
-.socialIconContainer a:hover::after {
-  top: 0;
-}
-
-.socialIconContainer a:hover .icon {
-  color: $dark;
-}
-
-.socialIconContainer a:hover {
-  transform: scale(1.1);
-}
-
-.buttonContainer {
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .button {
+ 
+ 
+  .projectContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 40px;
-    width: 100%;
-    height: 50px;
-    border: none;
-    border-radius: $radius;
-    background-color: $yellow;
-    color: $dark;
-    font-size: 20px;
-    border: $border;
-    border-width: 2px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    &:hover {
-      background-color: $pink;
-      color: $light;
-      border: $border;
-      border-color: $yellow;
-      border-width: 2px;
-    }
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+
+
   }
 }
 
-.linkStyle {
-  color: $yellow;
-}
