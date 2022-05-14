@@ -24,6 +24,11 @@ const Layout = ({ children, currentPath }) => {
     return strTime;
   };
 
+  const particleRef = useRef(null);
+  React.useEffect(() => {
+    import('@lottiefiles/lottie-player');
+  });
+
   useEffect(() => {
     if (videoRef && videoRef.current) {
       videoRef.current.playbackRate = 0.3;
@@ -53,6 +58,17 @@ const Layout = ({ children, currentPath }) => {
           <Navbar />
         </div>
         {children}
+        {/* @ts-ignore */}
+        <lottie-player
+          id="firstLottie"
+          ref={particleRef}
+          autoplay
+          // controls
+          loop
+          mode="normal"
+          src="/assets/lottieAnimations/floorParticles.json"
+          // @ts-ignore
+          style={{ width: '900px' }}></lottie-player>
       </div>
     </div>
   );

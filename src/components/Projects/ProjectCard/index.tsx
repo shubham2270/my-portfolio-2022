@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import styles from './projectCard.module.scss';
 const { main, button, buttonWrapper, description } = styles;
@@ -16,7 +17,9 @@ const ProjectCard = ({ image, alt, desc, url, github, gif }: ProjectCardProps) =
   return (
     <div className={main}>
       <div>
-        <img src={`/assets/images/projectImages/webprojects/${gif}`} alt={alt}></img>
+        <div style={{ position: 'relative' }}>
+          <Image src={`/assets/images/projectImages/webprojects/${gif}`} height={160} width={380} alt={alt}></Image>
+        </div>
         <p className={description}>{desc}</p>
       </div>
       <div className={buttonWrapper}>

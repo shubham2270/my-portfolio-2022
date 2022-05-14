@@ -1,3 +1,4 @@
+import React, { useRef } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
@@ -6,6 +7,10 @@ import Layout from 'src/components/Layout';
 import MyName from 'src/components/MyName';
 
 export default function Home() {
+  const ref = useRef(null);
+  React.useEffect(() => {
+    import('@lottiefiles/lottie-player');
+  });
   return (
     <>
       <Head>
@@ -16,6 +21,24 @@ export default function Home() {
       <main className={styles.main}>
         <div style={{ display: 'flex' }}>
           <MyName />
+          <lottie-player
+            id="firstLottie"
+            ref={ref}
+            autoplay
+            // controls
+            loop
+            mode="normal"
+            src="/assets/lottieAnimations/codeTyping.json"
+            style={{ width: '900px', height: '900px' }}></lottie-player>
+          {/* <lottie-player
+            id="firstLottie"
+            ref={ref}
+            autoplay
+            // controls
+            loop
+            mode="normal"
+            src="/assets/lottieAnimations/floorParticles.json"
+            style={{ width: '900px', height: '900px' }}></lottie-player> */}
         </div>
       </main>
     </>
